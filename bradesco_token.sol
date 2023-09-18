@@ -11,7 +11,7 @@ pragma solidity 0.8.19;
  * @dev Interface of the ERC20 standard as defined in the EIP.
  */
 
-//Contrato 0x0695C778aa5eAA29e789fD6Df596c76084C700ba
+//Contrato 0xFc5FCbA8989c49C207a8bB6AF2fE9f70f81c15A3
 
 interface IERC20 {
 
