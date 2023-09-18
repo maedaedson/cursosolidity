@@ -34,16 +34,16 @@ contract Aluguel {
 
     constructor(    string memory _nomeLocador, 
                     string memory _nomeLocatario, 
-                    //address payable _contaLocador, 
-                    address payable _contaLocatario, 
+                    address payable _contaLocador, 
+                    //address payable _contaLocatario, 
                     uint256 _valorDoAluguel)  payable {
         locador = _nomeLocador;
         locatario = _nomeLocatario;
         valor = _valorDoAluguel;
-        contaLocatario = _contaLocatario;
-        //contaLocador = _contaLocador;
-        owner = msg.sender;
-        //locatario = msg.sender;
+        //contaLocatario = _contaLocatario;
+        contaLocador = _contaLocador;
+        //owner = msg.sender;
+        locatarioendereco = msg.sender;
 
     }
  
@@ -83,9 +83,9 @@ contract Aluguel {
     
     function receberPagamento() public payable {
         require(msg.value>=valor, "Valor insuficiente");
-        require(msg.sender == owner, "teste");
-        // contaLocador.transfer(msg.value);
-        contaLocatario.transfer(msg.value);
+        require(msg.sender == locatarioendereco, "nova mensagem");
+        contaLocador.transfer(msg.value);
+        //contaLocatario.transfer(msg.value);
         statusPagamento.push(true);
     }
     
