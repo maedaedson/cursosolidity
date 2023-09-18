@@ -5,8 +5,7 @@ This work is licensed under a Creative Commons Attribution 4.0 International Lic
 */
 
 
-//Contrato 0xddaAd340b0f1Ef65169Ae5E41A8b10776a75482d
-//contrato 0xb27A31f1b0AF2946B7F582768f03239b1eC07c2c
+//0xd9145CCE52D386f254917e481eB44e9943F39138
 
 //valorAluguel 2 ether
 
@@ -28,9 +27,9 @@ contract Aluguel {
     //Locador e a pessoa que tem a propriedade de um imóvel
     //Loatário e a pessoa que faz o pagamento mensal pelo aluguel do imóvel
     
-    //address payable public contaLocador;
-    address payable public contaLocatario;
-    address public owner;
+    address payable public contaLocador;
+   // address payable public contaLocatario;
+    address public locatarioEndereco;
 
     constructor(    string memory _nomeLocador, 
                     string memory _nomeLocatario, 
@@ -43,7 +42,7 @@ contract Aluguel {
         //contaLocatario = _contaLocatario;
         contaLocador = _contaLocador;
         //owner = msg.sender;
-        locatarioendereco = msg.sender;
+        locatarioEndereco = msg.sender;
 
     }
  
@@ -83,7 +82,7 @@ contract Aluguel {
     
     function receberPagamento() public payable {
         require(msg.value>=valor, "Valor insuficiente");
-        require(msg.sender == locatarioendereco, "nova mensagem");
+        require(msg.sender == locatarioEndereco, "nova mensagem");
         contaLocador.transfer(msg.value);
         //contaLocatario.transfer(msg.value);
         statusPagamento.push(true);
