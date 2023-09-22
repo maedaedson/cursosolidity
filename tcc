@@ -3,7 +3,7 @@ pragma solidity 0.8.19;
 
 import "https://github.com/jeffprestes/cursosolidity/blob/master/bradesco_token_aberto.sol";
 
-// Cadastro: 0xf8e81D47203A594245E36C48e151709F0C19fBe8
+// Cadastro: 0x8E8314AB3C4C51161B8Af857a82620327877D2a5
 
 contract Cadastro {
 
