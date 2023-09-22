@@ -3,8 +3,7 @@ pragma solidity 0.8.19;
 
 import "https://github.com/jeffprestes/cursosolidity/blob/master/bradesco_token_aberto.sol";
 
-// contrato 0x8C99373D9c5732aAA3F14915E6D76093282B5078
-
+// contrato 0x03Fe1c3268E56915aB91Ff78d95C48a69506badf
 contract TccMaedaTreinamento {
 
     ExercicioToken private exercicioToken;
@@ -21,7 +20,7 @@ contract TccMaedaTreinamento {
         string memory _agencia,
         string memory _conta) payable {
 
-        exercicioToken = ExercicioToken(0x8431717927C4a3343bCf1626e7B5B1D31E240406);
+        exercicioToken = ExercicioToken(0x89A2E711b2246B586E51f579676BE2381441A0d0);
         primeiroNome = _primeiroNome;
         sobreNome = _sobreNome;
         agencia = _agencia;
